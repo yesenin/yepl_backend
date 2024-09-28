@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "yepl.Functions", "yepl.Functions\yepl.Functions.csproj", "{98A03DDA-2B22-4B66-A35C-0FC5022A39F1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{98A03DDA-2B22-4B66-A35C-0FC5022A39F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98A03DDA-2B22-4B66-A35C-0FC5022A39F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98A03DDA-2B22-4B66-A35C-0FC5022A39F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98A03DDA-2B22-4B66-A35C-0FC5022A39F1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
