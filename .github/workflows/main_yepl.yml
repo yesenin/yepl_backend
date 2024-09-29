@@ -16,9 +16,7 @@ env:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    permissions:
-      id-token: write #This is required for requesting the JWT
-
+    
     steps:
       - name: 'Checkout GitHub Action'
         uses: actions/checkout@v4
@@ -34,19 +32,12 @@ jobs:
           pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}'
           dotnet build --configuration Release --output ./output
           popd
-      
-      - name: Login to Azure
-        uses: azure/login@v2
-        with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_B0D338C144E94247B5B0205D745431ED }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_690DC389EC6A4AD19E44CFB69B679C41 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_A51C4F89A886480B928DCD83DDF434EE }}
 
       - name: 'Run Azure Functions Action'
         uses: Azure/functions-action@v1
         id: fa
         with:
-          app-name: 'yepl'
+          app-name: 'yepl-api'
           slot-name: 'Production'
           package: '${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/output'
-          
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_3BA57068B5C041D7B9595C55A434023A }}
