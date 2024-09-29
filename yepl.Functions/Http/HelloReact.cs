@@ -18,6 +18,6 @@ public class HelloReact
     public IActionResult Run([HttpTrigger(AuthorizationLevel.Function, "get")] HttpRequest req)
     {
         _logger.LogInformation("C# HTTP trigger function processed a request.");
-        return new OkObjectResult($"And Anton Yesenin is here too, {DateTime.Now}");
+        return new OkObjectResult($"And Anton Yesenin is here too, {DateTime.Now}. v1.1");
     }
 }
